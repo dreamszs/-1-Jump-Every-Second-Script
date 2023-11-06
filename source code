@@ -1,0 +1,79 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local RAVENAFKFARM = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local START = Instance.new("TextButton")
+local STOP = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(231, 234, 167)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.254901975, 0, 0.109181143, 0)
+Frame.Size = UDim2.new(0, 206, 0, 227)
+Frame.Active = true
+Frame.Draggable = true
+
+RAVENAFKFARM.Name = "RAVEN AFK FARM"
+RAVENAFKFARM.Parent = Frame
+RAVENAFKFARM.BackgroundColor3 = Color3.fromRGB(4, 2, 1)
+RAVENAFKFARM.BackgroundTransparency = 1.000
+RAVENAFKFARM.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RAVENAFKFARM.BorderSizePixel = 0
+RAVENAFKFARM.Position = UDim2.new(0.0967364237, 0, 0.0454545207, 0)
+RAVENAFKFARM.Size = UDim2.new(0, 165, 0, 44)
+RAVENAFKFARM.Font = Enum.Font.SourceSans
+RAVENAFKFARM.Text = "RAVEN AFK FARM"
+RAVENAFKFARM.TextColor3 = Color3.fromRGB(14, 28, 227)
+RAVENAFKFARM.TextScaled = true
+RAVENAFKFARM.TextSize = 72.000
+RAVENAFKFARM.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0, 10)
+UICorner.Parent = Frame
+
+START.Name = "START"
+START.Parent = Frame
+START.BackgroundColor3 = Color3.fromRGB(104, 223, 76)
+START.BorderColor3 = Color3.fromRGB(0, 0, 0)
+START.BorderSizePixel = 0
+START.Position = UDim2.new(0.180079639, 0, 0.306818217, 0)
+START.Size = UDim2.new(0, 131, 0, 41)
+START.Font = Enum.Font.SourceSans
+START.Text = "START"
+START.TextColor3 = Color3.fromRGB(0, 0, 0)
+START.TextSize = 31.000
+START.MouseButton1Click:connect(function()
+    local Enabled = true
+if Enabled then
+repeat task.wait()
+    local LocalPlayer = game:GetService("Players").LocalPlayer
+LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Wins.World14.CFrame
+until not Enabled
+end
+end)
+
+STOP.Name = "STOP"
+STOP.Parent = Frame
+STOP.BackgroundColor3 = Color3.fromRGB(208, 73, 39)
+STOP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+STOP.BorderSizePixel = 0
+STOP.Position = UDim2.new(0.180079639, 0, 0.599144042, 0)
+STOP.Size = UDim2.new(0, 131, 0, 41)
+STOP.Font = Enum.Font.SourceSans
+STOP.Text = "STOP"
+STOP.TextColor3 = Color3.fromRGB(0, 0, 0)
+STOP.TextSize = 31.000
+STOP.MouseButton1Click:connect(function()
+    game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+end)
