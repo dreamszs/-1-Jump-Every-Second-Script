@@ -1,4 +1,4 @@
-# -1-Jump-Every-Second-Script
+# 1 Jump Every Second Script
 lol the script for the roblox game fully coded by me 
 
 - open source do whatever you want to it idc.
